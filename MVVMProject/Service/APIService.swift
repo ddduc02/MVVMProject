@@ -23,7 +23,6 @@ class APIService {
             }
             do {
                 let posts = try JSONDecoder().decode([Post].self, from: data)
-                print("check post \(posts)")
                 completion(posts, nil)
             } catch {
                 completion([], error)

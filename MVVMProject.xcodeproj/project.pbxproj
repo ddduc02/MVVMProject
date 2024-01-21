@@ -81,6 +81,12 @@
 		E8ED5BF62B5D550100CC76BA /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E8ED5BF52B5D550100CC76BA /* FirebaseRemoteConfigSwift */; };
 		E8ED5BF82B5D550100CC76BA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E8ED5BF72B5D550100CC76BA /* FirebaseStorage */; };
 		E8ED5BFA2B5D550100CC76BA /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E8ED5BF92B5D550100CC76BA /* FirebaseStorageCombine-Community */; };
+		E8ED5C012B5D659C00CC76BA /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED5BFF2B5D659C00CC76BA /* ExploreViewController.swift */; };
+		E8ED5C022B5D659C00CC76BA /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8ED5C002B5D659C00CC76BA /* ExploreViewController.xib */; };
+		E8ED5C052B5D693D00CC76BA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED5C032B5D693D00CC76BA /* MessageViewController.swift */; };
+		E8ED5C062B5D693D00CC76BA /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8ED5C042B5D693D00CC76BA /* MessageViewController.xib */; };
+		E8ED5C092B5D695000CC76BA /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED5C072B5D695000CC76BA /* NewPostViewController.swift */; };
+		E8ED5C0A2B5D695000CC76BA /* NewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8ED5C082B5D695000CC76BA /* NewPostViewController.xib */; };
 		E8F2003A2B5508DC00DD94C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F200392B5508DC00DD94C8 /* AppDelegate.swift */; };
 		E8F2003C2B5508DC00DD94C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2003B2B5508DC00DD94C8 /* SceneDelegate.swift */; };
 		E8F200432B5508DE00DD94C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F200422B5508DE00DD94C8 /* Assets.xcassets */; };
@@ -108,6 +114,12 @@
 		E8ED5B7B2B5D501A00CC76BA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E8ED5B7D2B5D503F00CC76BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E8ED5B7E2B5D503F00CC76BA /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		E8ED5BFF2B5D659C00CC76BA /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		E8ED5C002B5D659C00CC76BA /* ExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreViewController.xib; sourceTree = "<group>"; };
+		E8ED5C032B5D693D00CC76BA /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		E8ED5C042B5D693D00CC76BA /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		E8ED5C072B5D695000CC76BA /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		E8ED5C082B5D695000CC76BA /* NewPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostViewController.xib; sourceTree = "<group>"; };
 		E8F200362B5508DC00DD94C8 /* MVVMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F200392B5508DC00DD94C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8F2003B2B5508DC00DD94C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,7 +273,12 @@
 				E8F200682B5512D600DD94C8 /* HomeViewController.xib */,
 				E8ED5B7D2B5D503F00CC76BA /* ProfileViewController.swift */,
 				E8ED5B7E2B5D503F00CC76BA /* ProfileViewController.xib */,
-				E8823E482B57711B00539D12 /* MainViewController.swift */,
+				E8ED5BFF2B5D659C00CC76BA /* ExploreViewController.swift */,
+				E8ED5C002B5D659C00CC76BA /* ExploreViewController.xib */,
+				E8ED5C032B5D693D00CC76BA /* MessageViewController.swift */,
+				E8ED5C042B5D693D00CC76BA /* MessageViewController.xib */,
+				E8ED5C072B5D695000CC76BA /* NewPostViewController.swift */,
+				E8ED5C082B5D695000CC76BA /* NewPostViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +309,7 @@
 				E8F200442B5508DE00DD94C8 /* LaunchScreen.storyboard */,
 				E8F200392B5508DC00DD94C8 /* AppDelegate.swift */,
 				E8F2003B2B5508DC00DD94C8 /* SceneDelegate.swift */,
+				E8823E482B57711B00539D12 /* MainViewController.swift */,
 				E8F200422B5508DE00DD94C8 /* Assets.xcassets */,
 			);
 			path = Other;
@@ -421,11 +439,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8ED5C022B5D659C00CC76BA /* ExploreViewController.xib in Resources */,
+				E8ED5C0A2B5D695000CC76BA /* NewPostViewController.xib in Resources */,
 				E88F09652B565A12001A90B9 /* LoginViewController.xib in Resources */,
 				E8B9CBC32B568A1300647C0B /* TableViewCell.xib in Resources */,
 				E8ED5B802B5D503F00CC76BA /* ProfileViewController.xib in Resources */,
 				E8F200462B5508DE00DD94C8 /* LaunchScreen.storyboard in Resources */,
 				E8F200432B5508DE00DD94C8 /* Assets.xcassets in Resources */,
+				E8ED5C062B5D693D00CC76BA /* MessageViewController.xib in Resources */,
 				E88F09632B56573F001A90B9 /* SignupViewController.xib in Resources */,
 				E8F2006A2B5512D600DD94C8 /* HomeViewController.xib in Resources */,
 				E8ED5B7A2B5D500C00CC76BA /* GoogleService-Info.plist in Resources */,
@@ -446,14 +467,17 @@
 				E8F2003A2B5508DC00DD94C8 /* AppDelegate.swift in Sources */,
 				E8ED5B7C2B5D501A00CC76BA /* MainViewModel.swift in Sources */,
 				E8ED5B7F2B5D503F00CC76BA /* ProfileViewController.swift in Sources */,
+				E8ED5C012B5D659C00CC76BA /* ExploreViewController.swift in Sources */,
 				E8B9CBBF2B56818100647C0B /* APIService.swift in Sources */,
 				E8DC178F2B58C19100A38A6E /* SignupViewModel.swift in Sources */,
+				E8ED5C052B5D693D00CC76BA /* MessageViewController.swift in Sources */,
 				E8F2005E2B55121100DD94C8 /* User.swift in Sources */,
 				E8F2003C2B5508DC00DD94C8 /* SceneDelegate.swift in Sources */,
 				E837C4EB2B57E250007107EA /* Generic.swift in Sources */,
 				E8F200692B5512D600DD94C8 /* HomeViewController.swift in Sources */,
 				E8B9CBC22B568A1300647C0B /* TableViewCell.swift in Sources */,
 				E8B9CBBA2B5662D300647C0B /* LoginViewModel.swift in Sources */,
+				E8ED5C092B5D695000CC76BA /* NewPostViewController.swift in Sources */,
 				E8B9CBBC2B567F5900647C0B /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,6 @@
 import Foundation
 
 class HomeViewModel {
-//    var posts : [Post] = [] {
-//        didSet {
-//            self.postsChange()
-//        }
-//    }
-//    var postsChange :(() -> ()) = {}
     var posts : Binding<[Post]>
     init() {
         self.posts = Binding<[Post]>(value: [])
