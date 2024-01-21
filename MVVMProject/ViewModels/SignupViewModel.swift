@@ -6,60 +6,81 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignupViewModel {
-    var fullNameField: Binding<String>
-    var emailField: Binding<String>
-    var phoneNumberField: Binding<String>
-    var passwordField: Binding<String>
+    var fullName: Binding<String>
+    var email: Binding<String>
+    var phoneNumber: Binding<String>
+    var password: Binding<String>
     var errorLabel: Binding<String>
     
     init() {
-        self.fullNameField = Binding<String>(value: "")
-        self.emailField = Binding<String>(value: "")
-        self.phoneNumberField = Binding<String>(value: "")
-        self.passwordField = Binding<String>(value: "")
+        self.fullName = Binding<String>(value: "")
+        self.email = Binding<String>(value: "")
+        self.phoneNumber = Binding<String>(value: "")
+        self.password = Binding<String>(value: "")
         self.errorLabel = Binding<String>(value: "")
     }
     
     func signUp(result : @escaping ((Bool) -> Void)) {
-        if checkValid() {
-            let user = User(name: fullNameField.value, email: emailField.value, phone: phoneNumberField.value, password: passwordField.value)
-            Database.instance.users.append(user)
-            result(true)
-        } else {
+        guard validate() else {
             result(false)
+            return
         }
+        Auth.auth().createUser(withEmail: email.value, password: password.value) { result, error in
+            guard let userId = result?.user.uid else {
+                return
+            }
+            self.insertRecord(userId: userId)
+        }
+        result(true)
     }
     
-    func checkValid() -> Bool {
-        if fullNameField.value.isEmpty {
-            self.errorChanged("Fullname can not be empty!")
-            return false
-        } else if !emailField.value.contains("@") || emailField.value.isEmpty {
-            self.errorChanged("Email is invalid!")
-            return false
-        } else if phoneNumberField.value.isEmpty {
-            self.errorChanged("Phone number can not be empty")
-            return false
-        } else if passwordField.value.count < 6 {
-            self.errorChanged("Password length must be greater than 6 characters!")
+    func insertRecord(userId : String) {
+        let user = User(id: userId, name: fullName.value, email: email.value, phone: phoneNumber.value, password: password.value)
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(userId)
+            .setData(user.asDictionary())
+    }
+    
+    func validate() -> Bool {
+        guard !fullName.value.trimmingCharacters(in: .whitespaces).isEmpty,
+              !email.value.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.value.trimmingCharacters(in: .whitespaces).isEmpty,
+              !phoneNumber.value.trimmingCharacters(in: .whitespaces).isEmpty
+        else {
+            errorChanged("Please enter some text")
             return false
         }
+        
+        guard email.value.contains("@") && email.value.contains(".") else {
+            errorChanged("Invalid email")
+            return false
+        }
+        
+        guard password.value.count >= 8 else {
+            errorChanged("Password must be greater 8 characters")
+            return false
+        }
+        
         return true
+        
     }
     
     func fullNameChanged(_ newValue : String) {
-        fullNameField.value = newValue
+        fullName.value = newValue
     }
     func emailChanged(_ newValue : String) {
-        emailField.value = newValue
+        email.value = newValue
     }
     func phoneChanged(_ newValue : String) {
-        phoneNumberField.value = newValue
+        phoneNumber.value = newValue
     }
     func passwordChanged(_ newValue : String) {
-        passwordField.value = newValue
+        password.value = newValue
     }
     
     func errorChanged(_ newValue : String) {

@@ -25,10 +25,10 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func onTapNext(_ sender: UIButton) {
-        signupViewModel.fullNameField.value = fullNameField.text ?? ""
-        signupViewModel.emailField.value = emailField.text ?? ""
-        signupViewModel.phoneNumberField.value = phoneNumberField.text ?? ""
-        signupViewModel.passwordField.value = passwordField.text ?? ""
+        signupViewModel.fullName.value = fullNameField.text ?? ""
+        signupViewModel.email.value = emailField.text ?? ""
+        signupViewModel.phoneNumber.value = phoneNumberField.text ?? ""
+        signupViewModel.password.value = passwordField.text ?? ""
         signupViewModel.signUp { [weak self] success in
             if success {
                 self?.navigationController?.popViewController(animated: true)

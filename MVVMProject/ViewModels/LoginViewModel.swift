@@ -6,21 +6,13 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class LoginViewModel {
-//    var email : String = ""
-//    var password : String = ""
-//    var errorDidChange : (() -> ()) = {}
-//    var error : String = "" {
-//        didSet {
-//            self.errorDidChange()
-//        }
-//    }
-    
     var email : Binding<String>
     var password : Binding<String>
     var error : Binding<String>
-   
+    
     init() {
         self.email = Binding<String>(value: "")
         self.password = Binding<String>(value: "")
@@ -28,16 +20,32 @@ class LoginViewModel {
     }
     
     func login(result : @escaping ((Bool) -> Void)) {
-        for user in Database.instance.users {
-            if self.email.value == user.email && self.password.value == user.password {
-                result(true)
-                errorChanged("")
-            } else {
-                errorChanged("Email or password is not correct!")
-                print(error)
-            }
+        guard validate() else {
+            result(false)
+            return
         }
-        result(false)
+        
+        do {
+            try Auth.auth().signIn(withEmail: email.value, password: password.value)
+        } catch {
+            
+            result(false)
+        }
+        result(true)
+    }
+    
+    func validate() -> Bool {
+        guard !email.value.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.value.trimmingCharacters(in: .whitespaces).isEmpty
+        else {
+            emailChanged("Please enter some text")
+            return false
+        }
+        guard email.value.contains("@") && email.value.contains(".") else {
+            emailChanged("Please enter valid message")
+            return false
+        }
+        return true
     }
     
     func emailChanged(_ newValue : String) {

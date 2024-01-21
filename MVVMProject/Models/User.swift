@@ -8,8 +8,28 @@
 import Foundation
 
 struct User {
+    let id : String
     var name : String
     var email : String
     var phone : String
     var password : String
+    var imageUrl : String? = nil
+}
+
+extension User {
+    func asDictionary() -> [String: Any] {
+        var dictionary: [String: Any] = [
+            "id": id,
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "password": password
+        ]
+
+        if let imageUrl = imageUrl {
+            dictionary["imageUrl"] = imageUrl
+        }
+
+        return dictionary
+    }
 }
