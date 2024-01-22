@@ -14,6 +14,7 @@
                 <outlet property="emailField" destination="Ybx-7U-CcK" id="IUb-NK-PN5"/>
                 <outlet property="errorLabel" destination="Yys-Zd-QiE" id="LH0-br-1rb"/>
                 <outlet property="fullNameField" destination="xd6-NA-UON" id="sfF-gC-2pW"/>
+                <outlet property="image" destination="1qU-2t-0xA" id="QoF-Fv-ewq"/>
                 <outlet property="passwordField" destination="HvB-x7-DiC" id="rR5-LN-VCK"/>
                 <outlet property="phoneNumberField" destination="syn-ks-jJ1" id="Mz1-1x-BsU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

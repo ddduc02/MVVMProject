@@ -22,6 +22,7 @@ class MainViewModel {
     func isSignIn() -> Bool {
         return Auth.auth().currentUser?.uid != nil
     }
+    
     func currentUserIdChanged(newValue : String) {
         currentUserId.value = newValue
     }
