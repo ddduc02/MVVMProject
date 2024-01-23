@@ -25,6 +25,9 @@
 		E838C7592B5E9FF30035E81C /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E838C7582B5E9FF30035E81C /* FirebaseRemoteConfigSwift */; };
 		E838C75B2B5E9FF30035E81C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E838C75A2B5E9FF30035E81C /* FirebaseStorage */; };
 		E838C75D2B5E9FF30035E81C /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E838C75C2B5E9FF30035E81C /* FirebaseStorageCombine-Community */; };
+		E838C7602B5EADBF0035E81C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838C75E2B5EADBF0035E81C /* EditProfileViewController.swift */; };
+		E838C7612B5EADBF0035E81C /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E838C75F2B5EADBF0035E81C /* EditProfileViewController.xib */; };
+		E838C7632B5EBFC60035E81C /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E838C7622B5EBFC60035E81C /* EditProfileViewModel.swift */; };
 		E862A2FD2B5E853A00396010 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862A2FC2B5E853A00396010 /* FirebaseService.swift */; };
 		E862A3002B5E87FA00396010 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862A2FF2B5E87FA00396010 /* MyExtensions.swift */; };
 		E8823E4A2B57711B00539D12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8823E482B57711B00539D12 /* MainViewController.swift */; };
@@ -89,6 +92,9 @@
 /* Begin PBXFileReference section */
 		E837C4EA2B57E250007107EA /* Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generic.swift; sourceTree = "<group>"; };
 		E838C7262B5E9BBA0035E81C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E838C75E2B5EADBF0035E81C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		E838C75F2B5EADBF0035E81C /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		E838C7622B5EBFC60035E81C /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		E862A2FC2B5E853A00396010 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		E862A2FF2B5E87FA00396010 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
 		E8823E482B57711B00539D12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 				E8F200682B5512D600DD94C8 /* HomeViewController.xib */,
 				E8ED5B7D2B5D503F00CC76BA /* ProfileViewController.swift */,
 				E8ED5B7E2B5D503F00CC76BA /* ProfileViewController.xib */,
+				E838C75E2B5EADBF0035E81C /* EditProfileViewController.swift */,
+				E838C75F2B5EADBF0035E81C /* EditProfileViewController.xib */,
 				E8ED5BFF2B5D659C00CC76BA /* ExploreViewController.swift */,
 				E8ED5C002B5D659C00CC76BA /* ExploreViewController.xib */,
 				E8ED5C032B5D693D00CC76BA /* MessageViewController.swift */,
@@ -275,6 +283,7 @@
 				E8DC178E2B58C19100A38A6E /* SignupViewModel.swift */,
 				E8ED5B7B2B5D501A00CC76BA /* MainViewModel.swift */,
 				E838C7262B5E9BBA0035E81C /* ProfileViewModel.swift */,
+				E838C7622B5EBFC60035E81C /* EditProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -416,6 +425,7 @@
 				E8F200462B5508DE00DD94C8 /* LaunchScreen.storyboard in Resources */,
 				E8F200432B5508DE00DD94C8 /* Assets.xcassets in Resources */,
 				E8ED5C062B5D693D00CC76BA /* MessageViewController.xib in Resources */,
+				E838C7612B5EADBF0035E81C /* EditProfileViewController.xib in Resources */,
 				E88F09632B56573F001A90B9 /* SignupViewController.xib in Resources */,
 				E8F2006A2B5512D600DD94C8 /* HomeViewController.xib in Resources */,
 				E8ED5B7A2B5D500C00CC76BA /* GoogleService-Info.plist in Resources */,
@@ -429,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E838C7632B5EBFC60035E81C /* EditProfileViewModel.swift in Sources */,
 				E862A3002B5E87FA00396010 /* MyExtensions.swift in Sources */,
 				E8F200612B5512B700DD94C8 /* LoginViewController.swift in Sources */,
 				E8823E4A2B57711B00539D12 /* MainViewController.swift in Sources */,
@@ -439,6 +450,7 @@
 				E862A2FD2B5E853A00396010 /* FirebaseService.swift in Sources */,
 				E8ED5B7F2B5D503F00CC76BA /* ProfileViewController.swift in Sources */,
 				E8ED5C012B5D659C00CC76BA /* ExploreViewController.swift in Sources */,
+				E838C7602B5EADBF0035E81C /* EditProfileViewController.swift in Sources */,
 				E8B9CBBF2B56818100647C0B /* APIService.swift in Sources */,
 				E8DC178F2B58C19100A38A6E /* SignupViewModel.swift in Sources */,
 				E8ED5C052B5D693D00CC76BA /* MessageViewController.swift in Sources */,

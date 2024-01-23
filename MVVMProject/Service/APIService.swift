@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Alamofire
+import AlamofireImage
+import UIKit
 
 class APIService {
     static let instance = APIService()
@@ -28,5 +31,14 @@ class APIService {
                 completion([], error)
             }
         }.resume()
+    }
+    
+    func getUserImage(url: String, completion: @escaping (Bool, UIImage?) ->Void ) {
+        AF.request(url).responseImage { response in
+          if case .success(let image) = response.result {
+            completion(true, image)
+          }
+        }
+        completion(false, nil)
     }
 }

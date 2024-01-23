@@ -84,6 +84,8 @@ class MainViewController: UITabBarController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            let login = LoginViewController()
+            navigationController?.setViewControllers([login], animated: true)
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }

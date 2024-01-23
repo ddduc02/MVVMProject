@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0D82520D-B718-46A2-9434-5E658424D6ED"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82603D5D-2FC2-4330-80DC-306CFF94CD32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVMProject/Views/EditProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "onTapDone(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82603D5D-2FC2-4330-80DC-306CFF94CD32 - 9125ade95b6ca6a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVVMProject.EditProfileViewController.setupUI() -&gt; ()"
+                  moduleName = "MVVMProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ducdo/Documents/swift/MVVMProject/MVVMProject/Views/EditProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "82603D5D-2FC2-4330-80DC-306CFF94CD32 - 2bc5f56f3066e814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVVMProject.EditProfileViewController.onTapDone(__C.UIButton) -&gt; ()"
+                  moduleName = "MVVMProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ducdo/Documents/swift/MVVMProject/MVVMProject/Views/EditProfileViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "2411">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8DA3ADB-C4D0-49FB-BB8F-349EF457C9FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVMProject/ViewModels/EditProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "updateInfor(user:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8DA3ADB-C4D0-49FB-BB8F-349EF457C9FA - 3fe381a23b657c12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVVMProject.EditProfileViewModel.updateInfor() -&gt; ()"
+                  moduleName = "MVVMProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ducdo/Documents/swift/MVVMProject/MVVMProject/ViewModels/EditProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "759">
+               </Location>
+               <Location
+                  uuid = "B8DA3ADB-C4D0-49FB-BB8F-349EF457C9FA - dd12bfdf131893db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in MVVMProject.EditProfileViewModel.updateInfor(user: MVVMProject.User) -&gt; ()"
+                  moduleName = "MVVMProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ducdo/Documents/swift/MVVMProject/MVVMProject/ViewModels/EditProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "B8DA3ADB-C4D0-49FB-BB8F-349EF457C9FA - c19130df4eb01f90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in MVVMProject.EditProfileViewModel.updateInfor(user: MVVMProject.User, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MVVMProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ducdo/Documents/swift/MVVMProject/MVVMProject/ViewModels/EditProfileViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "83">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85E766AE-1995-46E8-9A14-07CEA44D7E52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVMProject/Service/FirebaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "uploadUserImage(userId:image:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

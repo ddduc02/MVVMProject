@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="MVVMProject" customModuleProvider="target">
             <connections>
+                <outlet property="avatarImage" destination="4dW-nA-i19" id="7l2-zs-Uhf"/>
                 <outlet property="avatarView" destination="iFw-ij-kml" id="iQW-eh-Vsb"/>
                 <outlet property="userName" destination="Zu3-Io-QrH" id="UIA-il-cki"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,8 +27,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFw-ij-kml" userLabel="AvatarView">
                             <rect key="frame" x="16" y="16" width="80" height="80"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="4dW-nA-i19">
-                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4dW-nA-i19">
+                                    <rect key="frame" x="0.0" y="2" width="80" height="76.666666666666671"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,9 +41,8 @@
                                 <constraint firstItem="4dW-nA-i19" firstAttribute="top" secondItem="iFw-ij-kml" secondAttribute="top" id="xmf-nl-hsf"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu3-Io-QrH">
-                            <rect key="frame" x="113" y="46" width="88" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu3-Io-QrH">
+                            <rect key="frame" x="112" y="45" width="265" height="22"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -51,6 +51,9 @@
                             <rect key="frame" x="16" y="112" width="176.66666666666666" height="39"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="Edit profile"/>
+                            <connections>
+                                <action selector="onTapEdit:" destination="-1" eventType="touchUpInside" id="I9d-kF-HFZ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Dt-gHg">
                             <rect key="frame" x="200.66666666666663" y="112" width="176.33333333333337" height="39"/>
@@ -63,8 +66,11 @@
                         <constraint firstItem="Ayh-Zm-8xE" firstAttribute="width" secondItem="51o-gK-zjM" secondAttribute="width" multiplier="0.5" constant="-20" id="3Hp-Sk-JQZ"/>
                         <constraint firstItem="iFw-ij-kml" firstAttribute="leading" secondItem="51o-gK-zjM" secondAttribute="leading" constant="16" id="Iv4-tk-lpm"/>
                         <constraint firstItem="Ayh-Zm-8xE" firstAttribute="top" secondItem="iFw-ij-kml" secondAttribute="bottom" constant="16" id="JtE-QD-gPp"/>
+                        <constraint firstAttribute="trailing" secondItem="Zu3-Io-QrH" secondAttribute="trailing" constant="16" id="RXZ-NK-Wfr"/>
                         <constraint firstItem="2Wf-Dt-gHg" firstAttribute="width" secondItem="51o-gK-zjM" secondAttribute="width" multiplier="0.5" constant="-20" id="ZRf-Pv-0Nf"/>
+                        <constraint firstItem="Zu3-Io-QrH" firstAttribute="leading" secondItem="iFw-ij-kml" secondAttribute="trailing" constant="16" id="cXb-IV-s3i"/>
                         <constraint firstItem="2Wf-Dt-gHg" firstAttribute="top" secondItem="iFw-ij-kml" secondAttribute="bottom" constant="16" id="kfI-iM-sSo"/>
+                        <constraint firstItem="Zu3-Io-QrH" firstAttribute="centerY" secondItem="iFw-ij-kml" secondAttribute="centerY" id="mf2-bu-ORl"/>
                         <constraint firstItem="Ayh-Zm-8xE" firstAttribute="leading" secondItem="51o-gK-zjM" secondAttribute="leading" constant="16" id="sea-99-gEc"/>
                         <constraint firstItem="iFw-ij-kml" firstAttribute="top" secondItem="51o-gK-zjM" secondAttribute="top" constant="16" id="vYX-DT-Z0n"/>
                         <constraint firstItem="2Wf-Dt-gHg" firstAttribute="leading" secondItem="Ayh-Zm-8xE" secondAttribute="trailing" constant="8" id="zo5-0z-ujG"/>
@@ -83,7 +89,7 @@
         </view>
     </objects>
     <resources>
-        <image name="test" width="2880" height="1800"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
